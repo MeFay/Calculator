@@ -6,10 +6,10 @@
 
 :root {
   --main-color: #7678ed;
-  --main-color2: white;
+  --main-color2: #ffffff;
+  --main-color3: #c8b6ff;
   --box-shadow-color: pink;
-  --btn-color: #c8b6ff;
-  --text-display-color: #c8b6ff;
+  --btn-color: #b8c0ff;
 }
 
 html,
@@ -42,7 +42,7 @@ body {
 #result {
   font-size: 35px;
   border: 2px solid var(--main-color);
-  color: var(--text-display-color);
+  color: var(--main-color3);
   border-radius: 5px;
   text-align: center;
   width: 150vw;
@@ -52,7 +52,6 @@ body {
 
 .row {
   background-color: var(--main-color2);
-  background-color: var(--main-color2);
   display: flex;
   justify-content: center;
   width: 100%;
@@ -60,7 +59,7 @@ body {
 }
 
 .button {
-  background-color: #b8c0ff;
+  background-color: var(--btn-color);
   color: var(--main-color2);
   border: none;
   border-radius: 5px;
@@ -73,6 +72,6 @@ body {
 }
 
 .button:hover {
-  background-color: var(--btn-color);
+  background-color: var(--main-color3);
   color: var(--main-color2);
 }
