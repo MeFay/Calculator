@@ -31,7 +31,7 @@ function calculateResult() {
     }
     resultDisplay.value = result;
   } catch (error) {
-    resultDisplay.value = "Error!";
+    resultDisplay.value = "Syntax ERROR";
   }
 }
 
