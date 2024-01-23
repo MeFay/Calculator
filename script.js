@@ -1,13 +1,12 @@
 let result = 0;
 var calculator = document.getElementById("calculator");
 var resultDisplay = document.getElementById("result");
+var allButtons = document.querySelectorAll(".button");
 
-calculator.addEventListener("click", function (event) {
-  var target = event.target;
-
-  if (target.classList.contains("button")) {
-    handleButtonClick(target.innerText);
-  }
+allButtons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    handleButtonClick(button.innerText);
+  });
 });
 
 function handleButtonClick(value) {
