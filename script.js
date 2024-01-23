@@ -3,8 +3,8 @@ var calculator = document.getElementById("calculator");
 var resultDisplay = document.getElementById("result");
 var allButtons = document.querySelectorAll(".button");
 
-allButtons.forEach(function(button) {
-  button.addEventListener("click", function() {
+allButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
     handleButtonClick(button.innerText);
   });
 });
@@ -23,8 +23,16 @@ function handleButtonClick(value) {
   }
 }
 
-function updateResult(value) {
-  resultDisplay.value += value;
+function calculateResult() {
+  try {
+    result = eval(resultDisplay.value);
+    if (!isFinite(result)) {
+      throw new Error();
+    }
+    resultDisplay.value = result;
+  } catch (error) {
+    resultDisplay.value = "Error!";
+  }
 }
 
 function clearResult() {
@@ -32,7 +40,6 @@ function clearResult() {
   result = 0;
 }
 
-function calculateResult() {
-  result = eval(resultDisplay.value);
-  resultDisplay.value = result;
+function updateResult(value) {
+  resultDisplay.value += value;
 }
